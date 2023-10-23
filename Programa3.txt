@@ -1,0 +1,22 @@
+// Solicitar al usuario tanto el pago base, como las horas trabajadas
+const pagoBase = parseFloat(prompt("Por favor, indtroduzca el pago base por hora:"));
+const horas = parseFloat(prompt("Por favor, indtroduzca las horas trabajadas:"));
+
+// Reglas de tarifa por pago
+const tNormal = pagoBase;
+const tDoble = pagoBase * 2;
+const tTriple = pagoBase * 3;
+
+let pago = 0; // Valor incial del pago total
+
+// El cálculo para las horas trabajadas
+if (horas <= 40) {
+  pago = horas * tNormal;
+} else if (horas <= 47) {
+  pago = 40 * tNormal + (horas - 40) * tDoble;
+} else {
+  pago = 40 * tNormal + 7 * tDoble + (horas - 47) * tTriple;
+}
+
+// Mostrar en pantalla el pago total
+console.log(`Este es el pago semanal correspondiente a las horas y base señalados: $${pago.toFixed(2)}`);
