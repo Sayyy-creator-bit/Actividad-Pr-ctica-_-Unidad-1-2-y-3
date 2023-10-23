@@ -1,0 +1,19 @@
+const altura = 4; // Altura del triángulo (esto se puede ajujstrar para que tríangulo sea de dimensiones diferentes
+
+// Parte superior del triángulo
+for (let i = 1; i <= altura; i++) {
+  let linea = "";
+  for (let j = 1; j <= i; j++) {
+    linea += "#";
+  }
+  console.log(linea);
+}
+
+// Parte inferior del triángulo
+for (let i = altura - 1; i >= 1; i--) {
+  let linea = "";
+  for (let j = 1; j <= i; j++) {
+    linea += "#";
+  }
+  console.log(linea);
+}
